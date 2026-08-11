@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#060B18">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="description" content="FBS eBooks – World's Best Online eBooks Website. Shop 12,000+ eBooks and save up to 90% on all your purchases.">
+  <title>Home – FBS eBooks | World's Best Online eBooks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg-animated" aria-hidden="true"></div>
+  <div class="particles"  aria-hidden="true"></div>
+
+  <!-- Mobile Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+
+  <!-- ================================================================
+       HEADER
+       ================================================================ -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+
+      <!-- Brand -->
+      <a href="index.html" class="brand" id="brand-logo-link">
+        <div class="brand-logo-placeholder" aria-hidden="true">F</div>
+        <div class="brand-text">
+          <span class="brand-name">FBS eBooks</span>
+          <span class="brand-tagline">World's Best Online eBooks</span>
+        </div>
+      </a>
+
+      <!-- Search Bar -->
+      <div class="header-search" role="search">
+        <button id="header-search-btn" type="button" aria-label="Search">🔍</button>
+        <input
+          type="search"
+          id="header-search-input"
+          placeholder="Search books, authors…"
+          aria-label="Search books"
+          autocomplete="off"
+        >
+      </div>
+
+      <!-- Hamburger (mobile) -->
+      <button
+        class="hamburger" id="hamburger"
+        aria-label="Open navigation menu"
+        aria-expanded="false" aria-controls="sidebar"
+        type="button"
+      >
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="header-nav" aria-label="Main navigation">
+        <a href="index.html" id="nav-home" class="active">🏠 Home</a>
+        <!-- GREEN = Login is a positive/safe action -->
+        <a href="login.html" id="nav-login" class="btn-login">🔑 Login</a>
+        <!-- BLUE = Sign Up = trust, cool, informational -->
+        <a href="#" id="nav-signup" style="color:var(--text-secondary);">✨ Sign Up</a>
+        <!-- Cart opens modal -->
+        <a href="#" id="nav-cart" style="position:relative; color:var(--text-secondary);">
+          🛒 Cart
+          <span id="cart-badge" style="
+            display:none; position:absolute; top:-6px; right:-8px;
+            background:var(--red-main); color:#fff;
+            width:18px; height:18px; border-radius:50%;
+            font-size:0.65rem; font-weight:700;
+            align-items:center; justify-content:center;
+            box-shadow:var(--shadow-red);
+          ">0</span>
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ================================================================
+       PAGE LAYOUT
+       ================================================================ -->
+  <div class="page-layout">
+
+    <!-- ======================== LEFT SIDEBAR ======================== -->
+    <aside class="sidebar" id="sidebar" aria-label="Categories sidebar">
+
+      <!-- Browse Categories -->
+      <div class="sidebar-card">
+        <p class="sidebar-title">📂 Browse Categories</p>
+        <ul class="sidebar-menu" id="category-menu">
+          <li><a href="#" class="active" id="cat-all"       ><span class="menu-icon">📚</span> All Books</a></li>
+          <li><a href="#"               id="cat-fiction"    ><span class="menu-icon">🔮</span> Fiction</a></li>
+          <li><a href="#"               id="cat-nonfiction" ><span class="menu-icon">🧠</span> Non-Fiction</a></li>
+          <li><a href="#"               id="cat-sci"        ><span class="menu-icon">🔬</span> Science</a></li>
+          <li><a href="#"               id="cat-tech"       ><span class="menu-icon">💻</span> Technology</a></li>
+          <li><a href="#"               id="cat-selfhelp"   ><span class="menu-icon">🌱</span> Self-Help</a></li>
+          <li><a href="#"               id="cat-history"    ><span class="menu-icon">🏛️</span> History</a></li>
+          <li><a href="#"               id="cat-business"   ><span class="menu-icon">💼</span> Business</a></li>
+          <li><a href="#"               id="cat-kids"       ><span class="menu-icon">🧸</span> Kids</a></li>
+        </ul>
+      </div>
+
+      <!-- Store Stats — GREEN numbers = growth/positive -->
+      <div class="sidebar-card">
+        <p class="sidebar-title">📊 Store Stats</p>
+        <ul>
+          <li class="stat-item"><span class="stat-label">📖 Total Books</span><span class="stat-value">12,400+</span></li>
+          <li class="stat-item"><span class="stat-label">👥 Members</span>    <span class="stat-value">84,200</span></li>
+          <li class="stat-item"><span class="stat-label">⭐ Avg Rating</span> <span class="stat-value">4.8 / 5</span></li>
+          <li class="stat-item"><span class="stat-label">🔖 New Today</span>  <span class="stat-value">38</span></li>
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="sidebar-card">
+        <p class="sidebar-title">⚡ Quick Links</p>
+        <ul class="sidebar-menu">
+          <li><a href="#" id="link-bestsellers"><span class="menu-icon">🏆</span> Bestsellers</a></li>
+          <li><a href="#" id="link-new"        ><span class="menu-icon">🆕</span> New Arrivals</a></li>
+          <li><a href="#" id="link-deals"      ><span class="menu-icon">🔥</span> Hot Deals</a></li>
+          <li><a href="#" id="link-free"       ><span class="menu-icon">🎁</span> Free Books</a></li>
+          <li><a href="#" id="link-wishlist"   ><span class="menu-icon">❤️</span> Wishlist</a></li>
+        </ul>
+      </div>
+
+    </aside>
+
+    <!-- ======================== MAIN CONTENT ======================== -->
+    <main class="main-content" id="main-content">
+
+      <!-- Hero Banner -->
+      <section class="hero-banner" aria-labelledby="hero-title">
+        <!-- BLUE badge = trust CTA -->
+        <span class="hero-badge">🔥 Limited Time — Up to 90% OFF</span>
+        <h1 class="hero-title" id="hero-title">
+          Welcome to FBS<br>World's Best Online eBooks
+        </h1>
+        <p class="hero-sub">
+          Explore over 12,000 titles across every genre. Enjoy massive discounts
+          every day — read on any device, anywhere.
+        </p>
+        <div class="hero-actions">
+          <!-- BLUE = primary trust action -->
+          <a href="#" class="btn btn-primary" id="hero-btn-explore">🚀 Explore Books</a>
+          <!-- GREEN = join is positive/safe -->
+          <a href="#" class="btn btn-success" id="hero-btn-join">✨ Join for Free</a>
+        </div>
+      </section>
+
+      <!-- ======= FEATURED BOOKS ======= -->
+      <section aria-labelledby="featured-title">
+        <div class="section-header">
+          <h2 class="section-title" id="featured-title">⭐ Featured Books</h2>
+          <a href="#" class="section-link" id="view-all-featured-link">View all →</a>
+        </div>
+
+        <div class="books-grid" id="featured-grid">
+
+          <!-- Book 1 — Self-Help -->
+          <article class="book-card" id="book-1" data-category="selfhelp">
+            <div class="book-cover">
+              <!-- Picsum: book/library themed image -->
+              <img
+                src="https://picsum.photos/seed/book1/300/220"
+                alt="The Art of Thinking Clearly book cover"
+                loading="lazy"
+              >
+              <button class="book-add-btn" type="button">+ Add to Cart</button>
+            </div>
+            <!-- RED badge = urgent discount -->
+            <span class="book-badge-discount">−70%</span>
+            <button class="wish-btn" data-id="book-1" type="button" style="
+              position:absolute;top:10px;right:10px;z-index:4;
+              background:rgba(0,0,0,0.55);border:none;border-radius:50%;
+              width:30px;height:30px;cursor:pointer;font-size:0.9rem;
+              backdrop-filter:blur(6px); display:flex;align-items:center;justify-content:center;
+            " title="Add to Wishlist">🤍</button>
+            <div class="book-info">
+              <h3 class="book-title">The Art of Thinking Clearly</h3>
+              <p class="book-author">Rolf Dobelli</p>
+              <div class="book-price-row">
+                <!-- GREEN price = positive/good value -->
+                <span class="book-price">₹89</span>
+                <span class="book-old-price">₹299</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 2 — Science -->
+          <article class="book-card" id="book-2" data-category="science">
+            <div class="book-cover">
+              <img src="https://picsum.photos/seed/book2/300/220" alt="A Brief History of Time" loading="lazy">
+              <button class="book-add-btn" type="button">+ Add to Cart</button>
+            </div>
+            <span class="book-badge-discount">−85%</span>
+            <button class="wish-btn" data-id="book-2" type="button" style="position:absolute;top:10px;right:10px;z-index:4;background:rgba(0,0,0,0.55);border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:0.9rem;backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;" title="Add to Wishlist">🤍</button>
+            <div class="book-info">
+              <h3 class="book-title">A Brief History of Time</h3>
+              <p class="book-author">Stephen Hawking</p>
+              <div class="book-price-row">
+                <span class="book-price">₹59</span>
+                <span class="book-old-price">₹399</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 3 — Non-Fiction -->
+          <article class="book-card" id="book-3" data-category="nonfiction">
+            <div class="book-cover">
+              <img src="https://picsum.photos/seed/book3/300/220" alt="Sapiens" loading="lazy">
+              <button class="book-add-btn" type="button">+ Add to Cart</button>
+            </div>
+            <span class="book-badge-discount">−68%</span>
+            <button class="wish-btn" data-id="book-3" type="button" style="position:absolute;top:10px;right:10px;z-index:4;background:rgba(0,0,0,0.55);border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:0.9rem;backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;" title="Add to Wishlist">🤍</button>
+            <div class="book-info">
+              <h3 class="book-title">Sapiens: A Brief History</h3>
+              <p class="book-author">Yuval Noah Harari</p>
+              <div class="book-price-row">
+                <span class="book-price">₹149</span>
+                <span class="book-old-price">₹499</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 4 — Technology -->
+          <article class="book-card" id="book-4" data-category="technology">
+            <div class="book-cover">
+              <img src="https://picsum.photos/seed/book4/300/220" alt="Deep Work" loading="lazy">
+              <button class="book-add-btn" type="button">+ Add to Cart</button>
+            </div>
+            <!-- BLUE badge = NEW = trust/cool -->
+            <span class="book-badge-new">NEW</span>
+            <button class="wish-btn" data-id="book-4" type="button" style="position:absolute;top:10px;right:10px;z-index:4;background:rgba(0,0,0,0.55);border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:0.9rem;backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;" title="Add to Wishlist">🤍</button>
+            <div class="book-info">
+              <h3 class="book-title">Deep Work</h3>
+              <p class="book-author">Cal Newport</p>
+              <div class="book-price-row">
+                <span class="book-price">₹99</span>
+                <span class="book-old-price">₹349</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 5 — Self-Help -->
+          <article class="book-card" id="book-5" data-category="selfhelp">
+            <div class="book-cover">
+              <img src="https://picsum.photos/seed/book5/300/220" alt="Atomic Habits" loading="lazy">
+              <button class="book-add-btn" type="button">+ Add to Cart</button>
+            </div>
+            <span class="book-badge-discount">−90%</span>
+            <button class="wish-btn" data-id="book-5" type="button" style="position:absolute;top:10px;right:10px;z-index:4;background:rgba(0,0,0,0.55);border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:0.9rem;backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;" title="Add to Wishlist">🤍</button>
+            <div class="book-info">
+              <h3 class="book-title">Atomic Habits</h3>
+              <p class="book-author">James Clear</p>
+              <div class="book-price-row">
+                <span class="book-price">₹49</span>
+                <span class="book-old-price">₹499</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 6 — Non-Fiction -->
+          <article class="book-card" id="book-6" data-category="nonfiction">
+            <div class="book-cover">
+              <img src="https://picsum.photos/seed/book6/300/220" alt="Thinking Fast and Slow" loading="lazy">
+              <button class="book-add-btn" type="button">+ Add to Cart</button>
+            </div>
+            <span class="book-badge-discount">−73%</span>
+            <button class="wish-btn" data-id="book-6" type="button" style="position:absolute;top:10px;right:10px;z-index:4;background:rgba(0,0,0,0.55);border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:0.9rem;backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;" title="Add to Wishlist">🤍</button>
+            <div class="book-info">
+              <h3 class="book-title">Thinking, Fast and Slow</h3>
+              <p class="book-author">Daniel Kahneman</p>
+              <div class="book-price-row">
+                <span class="book-price">₹119</span>
+                <span class="book-old-price">₹449</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 7 — Business -->
+          <article class="book-card" id="book-7" data-category="business">
+            <div class="book-cover">
+              <img src="https://picsum.photos/seed/book7/300/220" alt="Zero to One" loading="lazy">
+              <button class="book-add-btn" type="button">+ Add to Cart</button>
+            </div>
+            <span class="book-badge-discount">−74%</span>
+            <button class="wish-btn" data-id="book-7" type="button" style="position:absolute;top:10px;right:10px;z-index:4;background:rgba(0,0,0,0.55);border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:0.9rem;backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;" title="Add to Wishlist">🤍</button>
+            <div class="book-info">
+              <h3 class="book-title">Zero to One</h3>
+              <p class="book-author">Peter Thiel</p>
+              <div class="book-price-row">
+                <span class="book-price">₹79</span>
+                <span class="book-old-price">₹299</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 8 — Kids (FREE) -->
+          <article class="book-card" id="book-8" data-category="kids">
+            <div class="book-cover">
+              <img src="https://picsum.photos/seed/book8/300/220" alt="Kids Story Book" loading="lazy">
+              <button class="book-add-btn" type="button">+ Add to Cart</button>
+            </div>
+            <!-- GREEN badge = FREE = very positive -->
+            <span class="book-badge-free">FREE</span>
+            <button class="wish-btn" data-id="book-8" type="button" style="position:absolute;top:10px;right:10px;z-index:4;background:rgba(0,0,0,0.55);border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:0.9rem;backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;" title="Add to Wishlist">🤍</button>
+            <div class="book-info">
+              <h3 class="book-title">Magical Tales for Kids</h3>
+              <p class="book-author">FBS Kids Collection</p>
+              <div class="book-price-row">
+                <span class="book-price" style="color:var(--green-light);">₹0</span>
+                <span class="book-old-price">₹199</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book F1 — Fiction -->
+          <article class="book-card" id="book-f1" data-category="fiction">
+            <div class="book-cover">
+              <img src="https://picsum.photos/seed/fiction1/300/220" alt="The Alchemist" loading="lazy">
+              <button class="book-add-btn" type="button">+ Add to Cart</button>
+            </div>
+            <span class="book-badge-discount">−65%</span>
+            <button class="wish-btn" data-id="book-f1" type="button" style="position:absolute;top:10px;right:10px;z-index:4;background:rgba(0,0,0,0.55);border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:0.9rem;backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;" title="Add to Wishlist">🤍</button>
+            <div class="book-info">
+              <h3 class="book-title">The Alchemist</h3>
+              <p class="book-author">Paulo Coelho</p>
+              <div class="book-price-row">
+                <span class="book-price">₹69</span>
+                <span class="book-old-price">₹199</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book F2 — Fiction -->
+          <article class="book-card" id="book-f2" data-category="fiction">
+            <div class="book-cover">
+              <img src="https://picsum.photos/seed/fiction2/300/220" alt="1984" loading="lazy">
+              <button class="book-add-btn" type="button">+ Add to Cart</button>
+            </div>
+            <span class="book-badge-new">NEW</span>
+            <button class="wish-btn" data-id="book-f2" type="button" style="position:absolute;top:10px;right:10px;z-index:4;background:rgba(0,0,0,0.55);border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:0.9rem;backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;" title="Add to Wishlist">🤍</button>
+            <div class="book-info">
+              <h3 class="book-title">1984</h3>
+              <p class="book-author">George Orwell</p>
+              <div class="book-price-row">
+                <span class="book-price">₹79</span>
+                <span class="book-old-price">₹249</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ======= NEW ARRIVALS ======= -->
+      <section aria-labelledby="new-arrivals-title">
+        <div class="section-header">
+          <h2 class="section-title" id="new-arrivals-title">🆕 New Arrivals</h2>
+          <a href="#" class="section-link" id="view-all-new-link">View all →</a>
+        </div>
+
+        <div class="books-grid" id="new-arrivals-grid">
+
+          <!-- Book 9 — Business -->
+          <article class="book-card" id="book-9" data-category="business">
+            <div class="book-cover">
+              <img src="https://picsum.photos/seed/book9/300/220" alt="The Lean Startup" loading="lazy">
+              <button class="book-add-btn" type="button">+ Add to Cart</button>
+            </div>
+            <span class="book-badge-new">NEW</span>
+            <button class="wish-btn" data-id="book-9" type="button" style="position:absolute;top:10px;right:10px;z-index:4;background:rgba(0,0,0,0.55);border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:0.9rem;backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;" title="Add to Wishlist">🤍</button>
+            <div class="book-info">
+              <h3 class="book-title">The Lean Startup</h3>
+              <p class="book-author">Eric Ries</p>
+              <div class="book-price-row">
+                <span class="book-price">₹89</span>
+                <span class="book-old-price">₹349</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 10 — Science -->
+          <article class="book-card" id="book-10" data-category="science">
+            <div class="book-cover">
+              <img src="https://picsum.photos/seed/book10/300/220" alt="The Gene" loading="lazy">
+              <button class="book-add-btn" type="button">+ Add to Cart</button>
+            </div>
+            <span class="book-badge-new">NEW</span>
+            <button class="wish-btn" data-id="book-10" type="button" style="position:absolute;top:10px;right:10px;z-index:4;background:rgba(0,0,0,0.55);border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:0.9rem;backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;" title="Add to Wishlist">🤍</button>
+            <div class="book-info">
+              <h3 class="book-title">The Gene: An Intimate History</h3>
+              <p class="book-author">Siddhartha Mukherjee</p>
+              <div class="book-price-row">
+                <span class="book-price">₹129</span>
+                <span class="book-old-price">₹499</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 11 — Self-Help -->
+          <article class="book-card" id="book-11" data-category="selfhelp">
+            <div class="book-cover">
+              <img src="https://picsum.photos/seed/book11/300/220" alt="Can't Hurt Me" loading="lazy">
+              <button class="book-add-btn" type="button">+ Add to Cart</button>
+            </div>
+            <span class="book-badge-new">NEW</span>
+            <button class="wish-btn" data-id="book-11" type="button" style="position:absolute;top:10px;right:10px;z-index:4;background:rgba(0,0,0,0.55);border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:0.9rem;backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;" title="Add to Wishlist">🤍</button>
+            <div class="book-info">
+              <h3 class="book-title">Can't Hurt Me</h3>
+              <p class="book-author">David Goggins</p>
+              <div class="book-price-row">
+                <span class="book-price">₹69</span>
+                <span class="book-old-price">₹299</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book 12 — History -->
+          <article class="book-card" id="book-12" data-category="history">
+            <div class="book-cover">
+              <img src="https://picsum.photos/seed/book12/300/220" alt="History Book" loading="lazy">
+              <button class="book-add-btn" type="button">+ Add to Cart</button>
+            </div>
+            <span class="book-badge-new">NEW</span>
+            <button class="wish-btn" data-id="book-12" type="button" style="position:absolute;top:10px;right:10px;z-index:4;background:rgba(0,0,0,0.55);border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:0.9rem;backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;" title="Add to Wishlist">🤍</button>
+            <div class="book-info">
+              <h3 class="book-title">The Rise and Fall of Empires</h3>
+              <p class="book-author">Dr. Richard Hall</p>
+              <div class="book-price-row">
+                <span class="book-price">₹109</span>
+                <span class="book-old-price">₹399</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ======================== RIGHT SIDEBAR ======================== -->
+    <aside class="sidebar-right" id="right-sidebar" aria-label="Offers sidebar">
+
+      <!-- Today's Deals -->
+      <div class="sidebar-card">
+        <p class="sidebar-title">🔥 Today's Deals</p>
+
+        <!-- RED tag = urgency (ends tonight) -->
+        <div class="offer-item" id="offer-1">
+          <span class="offer-emoji">💰</span>
+          <span class="offer-title">Flash Sale</span>
+          <span class="offer-desc">Top picks at 90% off — today only!</span>
+          <span class="offer-tag-red">Ends Tonight</span>
+        </div>
+
+        <!-- GREEN tag = verified/confident -->
+        <div class="offer-item" id="offer-2">
+          <span class="offer-emoji">🎓</span>
+          <span class="offer-title">Student Offer</span>
+          <span class="offer-desc">Extra 20% off with student email</span>
+          <span class="offer-tag-green">Verified</span>
+        </div>
+
+        <!-- BLUE tag = popular/trusted -->
+        <div class="offer-item" id="offer-3">
+          <span class="offer-emoji">📦</span>
+          <span class="offer-title">Bundle Deal</span>
+          <span class="offer-desc">Buy 3 eBooks, get 1 free!</span>
+          <span class="offer-tag-blue">Popular</span>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="sidebar-card">
+        <p class="sidebar-title">📧 Stay Updated</p>
+        <p style="font-size:0.8rem;color:var(--text-secondary);margin-bottom:12px;">
+          Get exclusive deals and new arrivals in your inbox.
+        </p>
+        <input
+          type="email" id="newsletter-email" class="form-input"
+          placeholder="Your email address"
+          style="padding:10px 13px;margin-bottom:10px;"
+        >
+        <!-- GREEN subscribe button = positive/safe -->
+        <button
+          class="btn btn-success" id="newsletter-submit-btn" type="button"
+          onclick="newsletterSubmit()"
+          style="width:100%;justify-content:center;padding:10px 0;border-radius:var(--radius-md);"
+        >Subscribe 🔔</button>
+      </div>
+
+      <!-- Color Legend -->
+      <div class="sidebar-card">
+        <p class="sidebar-title">🎨 Color Guide</p>
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:0.78rem;">
+          <div style="display:flex;align-items:center;gap:9px;">
+            <div style="width:12px;height:12px;background:var(--blue-main);border-radius:3px;flex-shrink:0;"></div>
+            <span style="color:var(--text-secondary);">Blue = Trust / Action</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:9px;">
+            <div style="width:12px;height:12px;background:var(--green-main);border-radius:3px;flex-shrink:0;"></div>
+            <span style="color:var(--text-secondary);">Green = Success / Safe</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:9px;">
+            <div style="width:12px;height:12px;background:var(--red-main);border-radius:3px;flex-shrink:0;"></div>
+            <span style="color:var(--text-secondary);">Red = Danger / Urgent</span>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+  </div><!-- end .page-layout -->
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+  <footer class="site-footer">
+    <p>&copy; 2024 All rights reserved by <span>FBS eBooks</span> &nbsp;|&nbsp; Built with ❤️ for book lovers everywhere</p>
+  </footer>
+
+  <!-- ================================================================
+       MOBILE BOTTOM NAVIGATION BAR
+       (visible on phones & tablets — hidden on desktop)
+       ================================================================ -->
+  <nav class="mobile-bottom-nav" id="mobile-bottom-nav" aria-label="Mobile navigation">
+    <ul>
+      <li>
+        <a href="index.html" id="mob-home" class="active">
+          <span class="nav-icon">🏠</span>
+          Home
+        </a>
+      </li>
+      <li>
+        <button type="button" id="mob-search-btn" onclick="document.getElementById('header-search-input').focus(); window.scrollTo({top:0,behavior:'smooth'});">
+          <span class="nav-icon">🔍</span>
+          Search
+        </button>
+      </li>
+      <li>
+        <button type="button" id="mob-categories-btn">
+          <span class="nav-icon">📂</span>
+          Categories
+        </button>
+      </li>
+      <li>
+        <button type="button" id="mob-cart-btn" onclick="openCartModal()">
+          <div class="nav-cart-wrap">
+            <span class="nav-icon">🛒</span>
+            <span class="cart-dot" id="mob-cart-dot">0</span>
+          </div>
+          Cart
+        </button>
+      </li>
+      <li>
+        <a href="login.html" id="mob-login">
+          <span class="nav-icon">🔑</span>
+          Login
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+

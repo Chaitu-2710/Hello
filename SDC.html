@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FBS eBooks – World's Best Online eBooks. Discover & download thousands of books.">
+  <title>FBS eBooks – Home</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Redirect splash */
+    .splash {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 20px;
+      padding: 24px;
+    }
+    .splash-logo {
+      font-size: 80px;
+      animation: floatIcon 3s ease-in-out infinite;
+    }
+    .splash h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      background: linear-gradient(90deg, #fff, #6c63ff, #ff6584);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .splash p {
+      color: rgba(255,255,255,0.6);
+      max-width: 400px;
+    }
+    .splash-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-animated" aria-hidden="true"></div>
+  <div class="particles"  aria-hidden="true"></div>
+
+  <main class="splash">
+    <div class="splash-logo">📚</div>
+    <h1>FBS eBooks</h1>
+    <p>World's Best Online eBooks Website – Shop 12,000+ titles and save up to 90%!</p>
+    <div class="splash-links">
+      <a href="index.html"  class="btn btn-primary" id="go-home-btn">🏠 Go to Home</a>
+      <a href="login.html"  class="btn btn-outline"  id="go-login-btn">🔑 Login</a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    // Auto-redirect after 2 seconds
+    setTimeout(() => { window.location.href = 'index.html'; }, 2000);
+  </script>
+</body>
+</html>

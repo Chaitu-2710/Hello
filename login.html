@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#060B18">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Login to FBS eBooks – Access 12,000+ books at up to 90% off.">
+  <title>Login – FBS eBooks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg-animated" aria-hidden="true"></div>
+  <div class="particles"  aria-hidden="true"></div>
+
+  <!-- Login Page -->
+  <main class="login-page" id="login-main">
+    <div class="login-container">
+
+      <!-- ====== LEFT PANEL: Illustration & Features ====== -->
+      <div class="login-panel-left" aria-hidden="true">
+        <div class="login-illustration">
+          <div class="big-icon">📚</div>
+          <h2>FBS eBooks</h2>
+          <p>Discover thousands of books at unbeatable prices. Your next adventure is just one login away.</p>
+        </div>
+
+        <!-- GREEN = confidence/positive features -->
+        <ul class="login-features">
+          <li class="login-feature">
+            <span class="feature-icon">🔖</span>
+            <span>10,000+ eBooks in every genre</span>
+          </li>
+          <li class="login-feature">
+            <span class="feature-icon">💸</span>
+            <span>Save up to 90% on purchases</span>
+          </li>
+          <li class="login-feature">
+            <span class="feature-icon">📱</span>
+            <span>Read on any device, anytime</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ====== RIGHT PANEL: Login Form ====== -->
+      <div class="login-panel-right">
+        <a href="index.html" class="back-link" id="back-home-link">← Back to Home</a>
+
+        <div class="login-form-header">
+          <h1>Welcome Back 👋</h1>
+          <p>Sign in to your FBS account to continue reading.</p>
+        </div>
+
+        <!-- BLUE social buttons = trust/cool -->
+        <div class="social-login">
+          <button class="btn-social" id="google-login-btn" data-provider="Google" type="button">
+            <span>🌐</span> Google
+          </button>
+          <button class="btn-social" id="facebook-login-btn" data-provider="Facebook" type="button">
+            <span>📘</span> Facebook
+          </button>
+        </div>
+
+        <div class="divider">or sign in with email</div>
+
+        <!-- Login Form -->
+        <form id="login-form" novalidate>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label class="form-label" for="login-email">Email Address</label>
+            <div class="input-wrapper">
+              <span class="input-icon">✉️</span>
+              <input
+                type="email" id="login-email" name="email"
+                class="form-input"
+                placeholder="you@example.com"
+                autocomplete="email" required
+              >
+            </div>
+            <!-- RED error text = danger/problem -->
+            <p class="field-error" id="email-error" role="alert"></p>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group">
+            <label class="form-label" for="login-password">Password</label>
+            <div class="input-wrapper">
+              <span class="input-icon">🔒</span>
+              <input
+                type="password" id="login-password" name="password"
+                class="form-input"
+                placeholder="Enter your password"
+                autocomplete="current-password" required
+              >
+              <button type="button" class="toggle-password" id="toggle-password" aria-label="Toggle password visibility">👁️</button>
+            </div>
+            <!-- RED error text = danger/problem -->
+            <p class="field-error" id="password-error" role="alert"></p>
+          </div>
+
+          <!-- Remember / Forgot -->
+          <div class="form-footer-row">
+            <label class="checkbox-label">
+              <!-- GREEN checkbox = positive confirmation -->
+              <input type="checkbox" id="remember-me" name="remember">
+              Remember me
+            </label>
+            <!-- BLUE forgot link = informational/safe -->
+            <a href="#" class="forgot-link" id="forgot-password-link">Forgot password?</a>
+          </div>
+
+          <!-- GREEN submit = positive/safe/confirm action -->
+          <button type="submit" class="btn-submit" id="login-submit">
+            <span class="btn-text">Sign In →</span>
+            <span class="spinner"></span>
+          </button>
+
+        </form>
+
+        <!-- GREEN sign up link = positive join action -->
+        <div class="signup-link" style="margin-top:22px;">
+          Don't have an account?
+          <a href="#" id="signup-redirect-link" onclick="openSignupModal(); return false;">Create one for free</a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2024 All rights reserved by <span>FBS eBooks</span></p>
+  </footer>
+
+  <!-- Mobile Bottom Navigation -->
+  <nav class="mobile-bottom-nav" id="mobile-bottom-nav" aria-label="Mobile navigation">
+    <ul>
+      <li>
+        <a href="index.html" id="mob-home">
+          <span class="nav-icon">🏠</span>
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="login.html" id="mob-login" class="active">
+          <span class="nav-icon">🔑</span>
+          Login
+        </a>
+      </li>
+      <li>
+        <button type="button" onclick="openSignupModal()">
+          <span class="nav-icon">✨</span>
+          Sign Up
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+
